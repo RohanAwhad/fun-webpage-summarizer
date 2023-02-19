@@ -1,13 +1,13 @@
 async function getReadableVersion(url) {
-    console.log(url)
+    if (url === undefined) {
+        return "No URL found"
+    }
     const res = await fetch ('http://localhost:50502/summarize?url='+url)
     const record = await res.json()
-    console.log(record['summary'])
-
-    document.getElementById('summary').innerHTML = record['summary']
+    return record['summary']
 }
 
 
-chrome.tabs.query({active: true, currentWindow: true}, async function(tabs) {
-    await getReadableVersion(tabs[0].url)
+chrome.tabs.query({currentWindow: true, active: true}, async function(tabs) {
+    document.getElementById('summary').innerHTML = await getReadableVersion(tabs[0].url)
 });
