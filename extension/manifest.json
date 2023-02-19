@@ -1,0 +1,14 @@
+{
+    "name": "WebPage Summarizer",
+    "description": "Summarize a web page",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "author": "Rohan Awhad",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Summarize"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
