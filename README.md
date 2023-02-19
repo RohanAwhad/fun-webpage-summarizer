@@ -13,3 +13,6 @@ This will be a chrome extension that will summarize a webpage for you.
 - [ ] Stylize the output
 - [ ] Host the backend engines on Cloud Run (Readable, Summarizer and the backend in this repo)
 - [ ] Add caching and storage to the backend each individual engines can have their own DBs
+Following will be in a different repo. I will link it [here](). Currently not linked #TODO
+- [ ] Write a custom text `generate()` function which works like HF, but on `np.ndarray` so that I can use it with ONNX
+- [ ] Make the summarizer engine fast by using ONNX and optimized models
